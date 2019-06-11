@@ -13,3 +13,27 @@ data class RasaEntity(val start: Int,
                       val entity: String,
                       val confidence: Double)
 
+data class BotMessage(
+        val recipient_id: String,
+        val text: String,
+        val image: String,
+        val buttons: List<Button>,
+        val Attachment: List<Attachment>
+
+)
+
+data class Button(
+        val title: String,
+        val payload: String
+)
+
+data class Attachment(
+        val title: String,
+        val payload: String
+)
+
+data class PostMessage(
+        val text: String,
+        val sender: String,
+        val parse_data: Message
+)

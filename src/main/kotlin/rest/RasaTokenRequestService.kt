@@ -18,8 +18,10 @@ class RasaTokenRequestService(override val rasaUrl: String, val token: String) :
                 }
                 "token" to token
             }
-            body {
-                json(body)
+            if (body != "") {
+                body {
+                    json(body)
+                }
             }
         }
     }
@@ -34,8 +36,10 @@ class RasaTokenRequestService(override val rasaUrl: String, val token: String) :
                 }
                 "token" to token
             }
-            body {
-                json(body)
+            if (body != "") {
+                body {
+                    json(body)
+                }
             }
         }
     }
